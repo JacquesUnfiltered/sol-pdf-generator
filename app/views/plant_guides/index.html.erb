@@ -1,43 +1,17 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Plant Guides</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Science title</th>
-      <th>Image</th>
-      <th>Sun</th>
-      <th>Water</th>
-      <th>Distance</th>
-      <th>Ph</th>
-      <th>Tips</th>
-      <th>Benefits</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @plant_guides.each do |plant_guide| %>
-      <tr>
-        <td><%= plant_guide.name %></td>
-        <td><%= plant_guide.science_title %></td>
-        <td><%= plant_guide.image %></td>
-        <td><%= plant_guide.sun %></td>
-        <td><%= plant_guide.water %></td>
-        <td><%= plant_guide.distance %></td>
-        <td><%= plant_guide.ph %></td>
-        <td><%= plant_guide.tips %></td>
-        <td><%= plant_guide.benefits %></td>
-        <td><%= link_to 'Show', plant_guide %></td>
-        <td><%= link_to 'Edit', edit_plant_guide_path(plant_guide) %></td>
-        <td><%= link_to 'Destroy', plant_guide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
+<div class="conteiner">
+  <div class="text-center">
+    <h1>Plants</h1>
+    <div class="row">
+      <% @plant_guides.each do |plant_guide| %>
+      <div class="col">
+        <div class="index-plant">
+          <h4 class="plant-name"><%= plant_guide.name %></h4>
+          <h5 class="plant-title"><%= plant_guide.science_title %></h5>
+          <%= link_to image_tag(plant_guide.image, class: 'img-fluid', size: '200x200'), plant_guide %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
 <%= link_to 'New Plant Guide', new_plant_guide_path %>

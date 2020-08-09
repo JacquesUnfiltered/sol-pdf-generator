@@ -4,10 +4,10 @@ class CreatePlantGuides < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :science_title
       t.string :image
-      t.integer :sun
-      t.integer :water
-      t.integer :distance
-      t.float :ph
+      t.string :sun
+      t.string :water
+      t.string :distance
+      t.string :ph
       t.text :tips
       t.text :benefits
 
