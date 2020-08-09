@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+body, html {
+   font-family: 'Cutive Mono', monospace;
+   font-weight: 400;
+   color: #000;
+   background-image: url('background-image.png');
+   height: 100%;
+   background-position: center;
+   background-repeat: none;
+   background-size: cover;
+ }
+
+ h1, h2, h3, h4, h5, h6 {
+   font-family: 'Playfair Display', serif;
+   color: 000;
+ }

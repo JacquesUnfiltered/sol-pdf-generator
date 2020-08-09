@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @plant_guide.name %>
+</p>
+
+<p>
+  <strong>Science title:</strong>
+  <%= @plant_guide.science_title %>
+</p>
+
+<p>
+  <strong>Image</strong>
+  <%= @plant_guide.image %>
+</p>
+
+
+<p>
+  <strong>Sun:</strong>
+  <%= @plant_guide.sun %>
+</p>
+
+<p>
+  <strong>Water:</strong>
+  <%= @plant_guide.water %>
+</p>
+
+<p>
+  <strong>Distance:</strong>
+  <%= @plant_guide.distance %>
+</p>
+
+<p>
+  <strong>Ph:</strong>
+  <%= @plant_guide.ph %>
+</p>
+
+<p>
+  <strong>Tips:</strong>
+  <%= @plant_guide.tips %>
+</p>
+
+<p>
+  <strong>Benefits:</strong>
+  <%= @plant_guide.benefits %>
+</p>
+
+<%= link_to 'Edit', edit_plant_guide_path(@plant_guide) %> |
+<%= link_to 'Back', plant_guides_path %>
